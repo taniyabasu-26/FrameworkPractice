@@ -15,8 +15,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import Automation.PageObjects.LandingPage;
+import Automation.PageObjects.ProductCatelog;
 
-public class StandaloneTest {
+public class SubmitOrderTest {
 
 	public static void main(String[] args) {
 		
@@ -24,24 +25,20 @@ public class StandaloneTest {
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5)); 
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
-		driver.get("https://rahulshettyacademy.com/client");		
+		driver.manage().window().maximize();		
 		
-		driver.findElement(By.id("userEmail")).sendKeys("taniya09@yomail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("Tani@2613");
-		driver.findElement(By.id("login")).click();
+		LandingPage landingPage = new LandingPage(driver);
+		landingPage.goTo();
+		landingPage.login("taniya09@yomail.com", "Tani@2613");		
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));
-		List<WebElement> products = driver.findElements(By.cssSelector(".mb-3"));
-		WebElement prod = products.stream().filter(product->
-		product.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null);
-		prod.findElement(By.cssSelector(".card-body button:last-of-type")).click();
+		ProductCatelog productCatelog = new ProductCatelog(driver);
+		List<WebElement> products = productCatelog.getProductList();
+		productCatelog.addProductToCart(productName);	
+			
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".ng-animating")));
-		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
+		/*driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
 		
 		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
 		Boolean match = cartProducts.stream().anyMatch(cartProduct->
@@ -58,7 +55,7 @@ public class StandaloneTest {
 		String confirmMsg = driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertTrue(confirmMsg.equalsIgnoreCase("Thankyou for the order."));
 		
-		driver.close();
+		driver.close();*/
 
 	}
 
