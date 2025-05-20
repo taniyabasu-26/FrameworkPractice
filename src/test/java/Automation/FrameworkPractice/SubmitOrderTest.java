@@ -14,6 +14,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import Automation.PageObjects.CartPage;
+import Automation.PageObjects.CheckoutPage;
+import Automation.PageObjects.ConfirmationPage;
 import Automation.PageObjects.LandingPage;
 import Automation.PageObjects.ProductCatelog;
 
@@ -22,6 +25,7 @@ public class SubmitOrderTest {
 	public static void main(String[] args) {
 		
 		String productName = "ZARA COAT 3";
+		String countryName = "india";
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -30,33 +34,24 @@ public class SubmitOrderTest {
 		driver.manage().window().maximize();		
 		
 		LandingPage landingPage = new LandingPage(driver);
-		landingPage.goTo();
-		landingPage.login("taniya09@yomail.com", "Tani@2613");		
-		
-		ProductCatelog productCatelog = new ProductCatelog(driver);
+		landingPage.goTo();		
+		ProductCatelog productCatelog = landingPage.login("taniya09@yomail.com", "Tani@2613");
 		List<WebElement> products = productCatelog.getProductList();
 		productCatelog.addProductToCart(productName);	
-			
+		CartPage cartPage = productCatelog.goToCart();	
 		
-		/*driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-		
-		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean match = cartProducts.stream().anyMatch(cartProduct->
-		cartProduct.getText().equalsIgnoreCase(productName));
+		Boolean match = cartPage.verifyProduct(productName);		
 		Assert.assertTrue(match);
-		driver.findElement(By.cssSelector(".totalRow button")).click();
 		
-		Actions act = new Actions(driver);
-		act.sendKeys(driver.findElement(By.xpath("//input[@placeholder='Select Country']")), "india").build().perform();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
-		driver.findElement(By.cssSelector(".ta-item:nth-of-type(2)")).click();
-		driver.findElement(By.cssSelector("action__submit ")).click();
+		CheckoutPage checkoutPage = cartPage.goToCheckout();
+		checkoutPage.selectCountry(countryName);
+		ConfirmationPage confirmationPage = checkoutPage.submitOrder();
 		
-		String confirmMsg = driver.findElement(By.cssSelector(".hero-primary")).getText();
+		String confirmMsg = confirmationPage.getConfirmMsg();
 		Assert.assertTrue(confirmMsg.equalsIgnoreCase("Thankyou for the order."));
 		
-		driver.close();*/
-
-	}
+		driver.close();
+		
+		}
 
 }

@@ -26,10 +26,12 @@ public class LandingPage extends AbstructComponent {
 	@FindBy(id="login")
 	WebElement submit;
 	
-	public void login(String email, String password) {
+	public ProductCatelog login(String email, String password) {
 		userEmail.sendKeys(email);
 		userPassord.sendKeys(password);
 		submit.click();
+		return new ProductCatelog(driver);
+		
 	}
 	
 	public void goTo() {
