@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Automation.PageObjects.CartPage;
+import Automation.PageObjects.OrderPage;
 
 
 public class AbstructComponent {
@@ -28,8 +29,15 @@ public class AbstructComponent {
 	@FindBy(css="[routerlink*='cart']")
 	WebElement cartHeader;
 	
+	@FindBy(css="[routerlink*='myorders']")
+	WebElement orderHeader;
+	
 	public void elementToApper(By findBy) {				
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+	}
+	
+	public void webElementToApper(WebElement findBy) {				
+		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 	
 	public void elementToDisapper(By findBy) {
@@ -39,6 +47,11 @@ public class AbstructComponent {
 	public CartPage goToCart() {
 		cartHeader.click();
 		return new CartPage(driver);
+	}
+		
+		public OrderPage goToOrder() {
+			orderHeader.click();
+			return new OrderPage(driver);
 		
 	}
 }

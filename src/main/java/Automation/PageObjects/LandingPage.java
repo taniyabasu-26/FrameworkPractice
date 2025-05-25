@@ -26,6 +26,9 @@ public class LandingPage extends AbstructComponent {
 	@FindBy(id="login")
 	WebElement submit;
 	
+	@FindBy(css="[class*='flyInOut']")
+	WebElement errorMsg;
+	
 	public ProductCatelog login(String email, String password) {
 		userEmail.sendKeys(email);
 		userPassord.sendKeys(password);
@@ -36,6 +39,12 @@ public class LandingPage extends AbstructComponent {
 	
 	public void goTo() {
 		driver.get("https://rahulshettyacademy.com/client");
+	}
+	
+	public String getErrorMsg() {
+		webElementToApper(errorMsg);
+		return errorMsg.getText();
+		
 	}
 
 }

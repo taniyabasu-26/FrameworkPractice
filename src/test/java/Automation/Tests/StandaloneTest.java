@@ -1,4 +1,4 @@
-package Automation.FrameworkPractice;
+package Automation.Tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
