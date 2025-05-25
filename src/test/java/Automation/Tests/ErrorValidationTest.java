@@ -14,7 +14,7 @@ import Automation.TestComponents.BaseTest;
 
 public class ErrorValidationTest extends BaseTest {
 	
-	@Test
+	@Test(groups= {"Error Handling"})
 	public void loginErrorValidation() throws IOException {
 		
 		landingPage.login("taniya09@yopmail.com", "Tani@2613");
