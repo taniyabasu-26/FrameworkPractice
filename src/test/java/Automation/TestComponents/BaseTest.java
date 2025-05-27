@@ -1,16 +1,26 @@
 package Automation.TestComponents;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import Automation.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -43,6 +53,24 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		return driver;
 		
+	}
+	
+	public List<HashMap<String, String>> getJsonData(String filePath) throws IOException {
+			
+			File file = new File(filePath);
+			String jsonContent = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
+			ObjectMapper mapper = new ObjectMapper();
+			List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
+			return data;
+			
+		}
+	
+	public File getScreenshot(String testcaseName) throws IOException {
+		TakesScreenshot ss = (TakesScreenshot)driver;
+		File source = ss.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir")+"\\reports\\"+testcaseName+".png");
+		FileUtils.copyFile(source, file);
+		return file;
 	}
 	
 	@BeforeMethod(alwaysRun=true)

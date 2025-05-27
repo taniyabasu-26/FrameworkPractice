@@ -1,30 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-25T19:23:14 IST" name="Suite" finished-at="2025-05-25T19:23:22 IST" duration-ms="7140">
+  <suite started-at="2025-05-26T19:03:29 IST" name="Suite" finished-at="2025-05-26T19:04:07 IST" duration-ms="38148">
     <groups>
-      <group name="Error Handling">
-        <method signature="ErrorValidationTest.loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@fa36558]" name="loginErrorValidation" class="Automation.Tests.ErrorValidationTest"/>
-      </group> <!-- Error Handling -->
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" name="submitOrder" class="Automation.Tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2025-05-25T19:23:14 IST" name="Submit Order Test" finished-at="2025-05-25T19:23:14 IST" duration-ms="17">
-    </test> <!-- Submit Order Test -->
-    <test started-at="2025-05-25T19:23:14 IST" name="Error Validations Test" finished-at="2025-05-25T19:23:22 IST" duration-ms="7140">
-      <class name="Automation.Tests.ErrorValidationTest">
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.ErrorValidationTest@fa36558]" started-at="2025-05-25T19:23:14 IST" name="lunchApplication" finished-at="2025-05-25T19:23:20 IST" duration-ms="5847" status="PASS">
+    <test started-at="2025-05-26T19:03:29 IST" name="Error Validations Test" finished-at="2025-05-26T19:03:29 IST" duration-ms="18">
+    </test> <!-- Error Validations Test -->
+    <test started-at="2025-05-26T19:03:29 IST" name="Submit Order Test" finished-at="2025-05-26T19:04:07 IST" duration-ms="38148">
+      <class name="Automation.Tests.SubmitOrderTest">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:29 IST" name="lunchApplication" finished-at="2025-05-26T19:03:34 IST" duration-ms="4847" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@fa36558]" started-at="2025-05-25T19:23:20 IST" name="loginErrorValidation" finished-at="2025-05-25T19:23:21 IST" duration-ms="1085" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:34 IST" name="submitOrder" data-provider="getData" finished-at="2025-05-26T19:03:49 IST" duration-ms="14719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Tani@2613, email=taniya09@yomail.com, productName=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginErrorValidation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.ErrorValidationTest@fa36558]" started-at="2025-05-25T19:23:21 IST" name="closeBrowser" finished-at="2025-05-25T19:23:22 IST" duration-ms="136" status="PASS">
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:49 IST" name="closeBrowser" finished-at="2025-05-26T19:03:49 IST" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- Automation.Tests.ErrorValidationTest -->
-    </test> <!-- Error Validations Test -->
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:49 IST" name="lunchApplication" finished-at="2025-05-26T19:03:52 IST" duration-ms="3260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lunchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:52 IST" name="submitOrder" data-provider="getData" finished-at="2025-05-26T19:04:07 IST" duration-ms="14792" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Rajiv@123, email=rajiv09@yopmail.com, productName=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:04:07 IST" name="closeBrowser" finished-at="2025-05-26T19:04:07 IST" duration-ms="117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Automation.Tests.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
   </suite> <!-- Suite -->
 </testng-results>

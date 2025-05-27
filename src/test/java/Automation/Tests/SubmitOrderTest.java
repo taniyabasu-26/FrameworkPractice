@@ -1,9 +1,11 @@
 package Automation.Tests;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Automation.PageObjects.CartPage;
 import Automation.PageObjects.CheckoutPage;
@@ -15,19 +17,19 @@ import Automation.TestComponents.BaseTest;
 
 public class SubmitOrderTest extends BaseTest {
 	
-	String productName = "ZARA COAT 3";
+	HashMap<String, String> testInput;
+	String countryName = "india";
 	
-	@Test
-	public void submitOrder() throws IOException {
-		
-		String countryName = "india";
-		
-		ProductCatelog productCatelog = landingPage.login("taniya09@yomail.com", "Tani@2613");
+	@Test(dataProvider="getData",groups="Purchase")
+	public void submitOrder(HashMap<String,String> input) throws IOException {
+				
+		this.testInput = input;
+		ProductCatelog productCatelog = landingPage.login(input.get("email"), input.get("password"));
 		List<WebElement> products = productCatelog.getProductList();
-		productCatelog.addProductToCart(productName);	
+		productCatelog.addProductToCart(input.get("productName"));	
 		CartPage cartPage = productCatelog.goToCart();	
 		
-		Boolean match = cartPage.verifyProduct(productName);		
+		Boolean match = cartPage.verifyProduct(input.get("productName"));		
 		Assert.assertTrue(match);
 		
 		CheckoutPage checkoutPage = cartPage.goToCheckout();
@@ -41,9 +43,15 @@ public class SubmitOrderTest extends BaseTest {
 	
 	@Test(dependsOnMethods={"submitOrder"}) 
 	public void orderHistory() {
-		ProductCatelog productCatelog = landingPage.login("taniya09@yomail.com", "Tani@2613");
+		ProductCatelog productCatelog = landingPage.login(testInput.get("email"), testInput.get("password"));
 		OrderPage orderPage = productCatelog.goToOrder();
-		Assert.assertTrue(orderPage.verifyOrder(productName)); 
+		Assert.assertTrue(orderPage.verifyOrder(testInput.get("productName"))); 
+	}
+	
+	@DataProvider
+	public Object[][] getData() throws IOException {
+		List<HashMap<String, String>> data = getJsonData(System.getProperty("user.dir")+"\\src\\test\\java\\Automation\\Data\\purchaseData.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
 	}
 	
 }
