@@ -11,6 +11,7 @@ import Automation.PageObjects.ConfirmationPage;
 import Automation.PageObjects.LandingPage;
 import Automation.PageObjects.ProductCatelog;
 import Automation.TestComponents.BaseTest;
+import Automation.TestComponents.Retry;
 
 public class ErrorValidationTest extends BaseTest {
 	
@@ -18,10 +19,10 @@ public class ErrorValidationTest extends BaseTest {
 	public void loginErrorValidation() throws IOException {
 		
 		landingPage.login("taniya09@yopmail.com", "Tani@2613");
-		Assert.assertEquals("Incorrect email or password.", landingPage.getErrorMsg());		
+		Assert.assertEquals("Incorrect email and password.", landingPage.getErrorMsg());		
 	}
 	
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void productErrorValidation() throws IOException{
 		String productName = "ZARA COAT 3";	
 		

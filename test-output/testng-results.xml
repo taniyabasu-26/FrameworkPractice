@@ -1,22 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-26T19:03:29 IST" name="Suite" finished-at="2025-05-26T19:04:07 IST" duration-ms="38148">
+  <suite started-at="2025-06-01T13:33:47 IST" name="Suite" finished-at="2025-06-01T13:34:37 IST" duration-ms="50102">
     <groups>
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" name="submitOrder" class="Automation.Tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" name="submitOrder" class="Automation.Tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
+      <group name="Error Handling">
+        <method signature="ErrorValidationTest.loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" name="loginErrorValidation" class="Automation.Tests.ErrorValidationTest"/>
+      </group> <!-- Error Handling -->
     </groups>
-    <test started-at="2025-05-26T19:03:29 IST" name="Error Validations Test" finished-at="2025-05-26T19:03:29 IST" duration-ms="18">
-    </test> <!-- Error Validations Test -->
-    <test started-at="2025-05-26T19:03:29 IST" name="Submit Order Test" finished-at="2025-05-26T19:04:07 IST" duration-ms="38148">
-      <class name="Automation.Tests.SubmitOrderTest">
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:29 IST" name="lunchApplication" finished-at="2025-05-26T19:03:34 IST" duration-ms="4847" status="PASS">
+    <test started-at="2025-06-01T13:33:47 IST" name="Error Validations Test" finished-at="2025-06-01T13:34:15 IST" duration-ms="28769">
+      <class name="Automation.Tests.ErrorValidationTest">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:47 IST" name="lunchApplication" finished-at="2025-06-01T13:33:52 IST" duration-ms="5533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:34 IST" name="submitOrder" data-provider="getData" finished-at="2025-05-26T19:03:49 IST" duration-ms="14719" status="PASS">
+        <test-method signature="loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:52 IST" name="loginErrorValidation" finished-at="2025-06-01T13:33:57 IST" duration-ms="4817" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email or password.] but found [Incorrect email and password.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email and password.]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at Automation.Tests.ErrorValidationTest.loginErrorValidation(ErrorValidationTest.java:22)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorValidation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:57 IST" name="closeBrowser" finished-at="2025-06-01T13:33:58 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:58 IST" name="lunchApplication" finished-at="2025-06-01T13:34:02 IST" duration-ms="3936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lunchApplication -->
+        <test-method signature="productErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:34:02 IST" name="productErrorValidation" finished-at="2025-06-01T13:34:15 IST" duration-ms="13655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:34:15 IST" name="closeBrowser" finished-at="2025-06-01T13:34:15 IST" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Automation.Tests.ErrorValidationTest -->
+    </test> <!-- Error Validations Test -->
+    <test started-at="2025-06-01T13:33:47 IST" name="Submit Order Test" finished-at="2025-06-01T13:34:37 IST" duration-ms="50102">
+      <class name="Automation.Tests.SubmitOrderTest">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:33:47 IST" name="lunchApplication" finished-at="2025-06-01T13:33:55 IST" duration-ms="7731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lunchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:33:55 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-01T13:34:09 IST" duration-ms="14745" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,15 +92,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:49 IST" name="closeBrowser" finished-at="2025-05-26T19:03:49 IST" duration-ms="114" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:09 IST" name="closeBrowser" finished-at="2025-06-01T13:34:09 IST" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:49 IST" name="lunchApplication" finished-at="2025-05-26T19:03:52 IST" duration-ms="3260" status="PASS">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:09 IST" name="lunchApplication" finished-at="2025-06-01T13:34:17 IST" duration-ms="7148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:03:52 IST" name="submitOrder" data-provider="getData" finished-at="2025-05-26T19:04:07 IST" duration-ms="14792" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:17 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-01T13:34:32 IST" duration-ms="15170" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,7 +111,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@587e5365]" started-at="2025-05-26T19:04:07 IST" name="closeBrowser" finished-at="2025-05-26T19:04:07 IST" duration-ms="117" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:32 IST" name="closeBrowser" finished-at="2025-06-01T13:34:32 IST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:32 IST" name="lunchApplication" finished-at="2025-06-01T13:34:36 IST" duration-ms="3860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lunchApplication -->
+        <test-method signature="orderHistory()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:36 IST" name="orderHistory" finished-at="2025-06-01T13:34:37 IST" depends-on-methods="Automation.Tests.SubmitOrderTest.submitOrder" duration-ms="764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistory -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:37 IST" name="closeBrowser" finished-at="2025-06-01T13:34:37 IST" duration-ms="88" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

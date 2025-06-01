@@ -8,7 +8,6 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,10 +17,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import Automation.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -65,12 +62,12 @@ public class BaseTest {
 			
 		}
 	
-	public File getScreenshot(String testcaseName) throws IOException {
+	public String getScreenshot(String testcaseName, WebDriver Driver) throws IOException {
 		TakesScreenshot ss = (TakesScreenshot)driver;
 		File source = ss.getScreenshotAs(OutputType.FILE);
 		File file = new File(System.getProperty("user.dir")+"\\reports\\"+testcaseName+".png");
 		FileUtils.copyFile(source, file);
-		return file;
+		return System.getProperty("user.dir")+"\\reports\\"+testcaseName+".png";
 	}
 	
 	@BeforeMethod(alwaysRun=true)

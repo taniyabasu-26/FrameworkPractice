@@ -14,13 +14,14 @@ import Automation.PageObjects.LandingPage;
 import Automation.PageObjects.OrderPage;
 import Automation.PageObjects.ProductCatelog;
 import Automation.TestComponents.BaseTest;
+import Automation.TestComponents.Retry;
 
 public class SubmitOrderTest extends BaseTest {
 	
 	HashMap<String, String> testInput;
 	String countryName = "india";
 	
-	@Test(dataProvider="getData",groups="Purchase")
+	@Test(dataProvider="getData",groups="Purchase", retryAnalyzer = Retry.class)
 	public void submitOrder(HashMap<String,String> input) throws IOException {
 				
 		this.testInput = input;
