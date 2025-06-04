@@ -18,7 +18,7 @@ public class ConfirmationPage extends AbstructComponent {
 	}
 	
 	@FindBy(css=".hero-primary")
-	WebElement confirmMsg;
+	private WebElement confirmMsg;
 	
 	public String getConfirmMsg() {
 		return confirmMsg.getText();

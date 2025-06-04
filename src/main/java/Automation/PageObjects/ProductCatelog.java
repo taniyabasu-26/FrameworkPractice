@@ -22,7 +22,7 @@ public class ProductCatelog extends AbstructComponent{
 	}
 	
 	@FindBy(css=".mb-3")
-	List<WebElement> products;
+	private List<WebElement> products;
 	
 	By productsBy = By.cssSelector(".mb-3");
 	By addToCart = By.cssSelector(".card-body button:last-of-type");

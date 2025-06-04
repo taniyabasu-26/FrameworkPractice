@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results retried="2" ignored="0" total="7" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-01T13:33:47 IST" name="Suite" finished-at="2025-06-01T13:34:37 IST" duration-ms="50102">
+  <suite started-at="2025-06-02T21:43:52 IST" name="Suite" finished-at="2025-06-02T21:44:46 IST" duration-ms="54490">
     <groups>
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" name="submitOrder" class="Automation.Tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" name="submitOrder" class="Automation.Tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
       <group name="Error Handling">
-        <method signature="ErrorValidationTest.loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" name="loginErrorValidation" class="Automation.Tests.ErrorValidationTest"/>
+        <method signature="ErrorValidationTest.loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@44a59da3]" name="loginErrorValidation" class="Automation.Tests.ErrorValidationTest"/>
       </group> <!-- Error Handling -->
     </groups>
-    <test started-at="2025-06-01T13:33:47 IST" name="Error Validations Test" finished-at="2025-06-01T13:34:15 IST" duration-ms="28769">
+    <test started-at="2025-06-02T21:43:52 IST" name="Error Validations Test" finished-at="2025-06-02T21:44:18 IST" duration-ms="26156">
       <class name="Automation.Tests.ErrorValidationTest">
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:47 IST" name="lunchApplication" finished-at="2025-06-01T13:33:52 IST" duration-ms="5533" status="PASS">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.ErrorValidationTest@44a59da3]" started-at="2025-06-02T21:43:52 IST" name="lunchApplication" finished-at="2025-06-02T21:43:58 IST" duration-ms="6042" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:52 IST" name="loginErrorValidation" finished-at="2025-06-01T13:33:57 IST" duration-ms="4817" status="FAIL">
+        <test-method signature="loginErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@44a59da3]" started-at="2025-06-02T21:43:58 IST" name="loginErrorValidation" finished-at="2025-06-02T21:43:59 IST" duration-ms="865" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Incorrect email or password.] but found [Incorrect email and password.]]]>
@@ -57,31 +57,195 @@ at java.base/java.lang.Thread.run(Thread.java:1575)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorValidation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:57 IST" name="closeBrowser" finished-at="2025-06-01T13:33:58 IST" duration-ms="224" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.ErrorValidationTest@44a59da3]" started-at="2025-06-02T21:44:00 IST" name="closeBrowser" finished-at="2025-06-02T21:44:00 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:33:58 IST" name="lunchApplication" finished-at="2025-06-01T13:34:02 IST" duration-ms="3936" status="PASS">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.ErrorValidationTest@44a59da3]" started-at="2025-06-02T21:44:00 IST" name="lunchApplication" finished-at="2025-06-02T21:44:04 IST" duration-ms="4423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="productErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:34:02 IST" name="productErrorValidation" finished-at="2025-06-01T13:34:15 IST" duration-ms="13655" status="PASS">
+        <test-method signature="productErrorValidation()[pri:0, instance:Automation.Tests.ErrorValidationTest@44a59da3]" started-at="2025-06-02T21:44:04 IST" name="productErrorValidation" finished-at="2025-06-02T21:44:18 IST" duration-ms="13429" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productErrorValidation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.ErrorValidationTest@27508c5d]" started-at="2025-06-01T13:34:15 IST" name="closeBrowser" finished-at="2025-06-01T13:34:15 IST" duration-ms="114" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.ErrorValidationTest@44a59da3]" started-at="2025-06-02T21:44:18 IST" name="closeBrowser" finished-at="2025-06-02T21:44:18 IST" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- Automation.Tests.ErrorValidationTest -->
     </test> <!-- Error Validations Test -->
-    <test started-at="2025-06-01T13:33:47 IST" name="Submit Order Test" finished-at="2025-06-01T13:34:37 IST" duration-ms="50102">
+    <test started-at="2025-06-02T21:43:52 IST" name="Submit Order Test" finished-at="2025-06-02T21:44:46 IST" duration-ms="54490">
       <class name="Automation.Tests.SubmitOrderTest">
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:33:47 IST" name="lunchApplication" finished-at="2025-06-01T13:33:55 IST" duration-ms="7731" status="PASS">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:43:52 IST" name="lunchApplication" finished-at="2025-06-02T21:43:58 IST" duration-ms="5621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:33:55 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-01T13:34:09 IST" duration-ms="14745" status="PASS">
+        <test-method retried="true" signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:43:58 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-02T21:44:00 IST" duration-ms="2311" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Tani@2613, email=taniya09@yomail.com, productName=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button _ngcontent-fwo-c33="" routerlink="/dashboard/cart" class="btn btn-custom" style="margin-top: -10px;" tabindex="0">...</button> is not clickable at point (1282, 27). Other element would receive the click: <div _ngcontent-fwo-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
+  (Session info: chrome=137.0.7151.55)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e14b1df64172a3ccaf75ac7ce1d48ce, clickElement {id=f.8722F612D3DC4285A66A0F2CF8EABEE7.d.84E1ED9701B80A8550EC03A2697BCD61.e.77}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\RAJIB\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57020/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3e14b1df64172a3ccaf75ac7ce1d48ce)] -> css selector: [routerlink*='cart']]
+Session ID: 3e14b1df64172a3ccaf75ac7ce1d48ce]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-fwo-c33="" routerlink="/dashboard/cart" class="btn btn-custom" style="margin-top: -10px;" tabindex="0">...</button> is not clickable at point (1282, 27). Other element would receive the click: <div _ngcontent-fwo-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed;">...</div>
+  (Session info: chrome=137.0.7151.55)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e14b1df64172a3ccaf75ac7ce1d48ce, clickElement {id=f.8722F612D3DC4285A66A0F2CF8EABEE7.d.84E1ED9701B80A8550EC03A2697BCD61.e.77}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\RAJIB\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57020/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3e14b1df64172a3ccaf75ac7ce1d48ce)] -> css selector: [routerlink*='cart']]
+Session ID: 3e14b1df64172a3ccaf75ac7ce1d48ce
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+at Automation.AbstructComponents.AbstructComponent.goToCart(AbstructComponent.java:48)
+at Automation.Tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:00 IST" name="closeBrowser" finished-at="2025-06-02T21:44:00 IST" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:00 IST" name="lunchApplication" finished-at="2025-06-02T21:44:04 IST" duration-ms="3886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lunchApplication -->
+        <test-method retried="true" signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:04 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-02T21:44:06 IST" duration-ms="1700" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Tani@2613, email=taniya09@yomail.com, productName=ZARA COAT 3}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button _ngcontent-idq-c33="" routerlink="/dashboard/cart" class="btn btn-custom" style="margin-top: -10px;" tabindex="0">...</button> is not clickable at point (1285, 27). Other element would receive the click: <div _ngcontent-idq-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;">...</div>
+  (Session info: chrome=137.0.7151.55)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c9c676b9257b6faf9b7a9545c5f1dc29, clickElement {id=f.1A39FDD8607C2C93BB9D0A4EDD94C0D0.d.4A8AA489077962D5A1BDD30595358960.e.245}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\RAJIB\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57065}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57065/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c9c676b9257b6faf9b7a9545c5f1dc29)] -> css selector: [routerlink*='cart']]
+Session ID: c9c676b9257b6faf9b7a9545c5f1dc29]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-idq-c33="" routerlink="/dashboard/cart" class="btn btn-custom" style="margin-top: -10px;" tabindex="0">...</button> is not clickable at point (1285, 27). Other element would receive the click: <div _ngcontent-idq-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;">...</div>
+  (Session info: chrome=137.0.7151.55)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c9c676b9257b6faf9b7a9545c5f1dc29, clickElement {id=f.1A39FDD8607C2C93BB9D0A4EDD94C0D0.d.4A8AA489077962D5A1BDD30595358960.e.245}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.55, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\RAJIB\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57065}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57065/devtoo..., se:cdpVersion: 137.0.7151.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c9c676b9257b6faf9b7a9545c5f1dc29)] -> css selector: [routerlink*='cart']]
+Session ID: c9c676b9257b6faf9b7a9545c5f1dc29
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+at Automation.AbstructComponents.AbstructComponent.goToCart(AbstructComponent.java:48)
+at Automation.Tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:06 IST" name="closeBrowser" finished-at="2025-06-02T21:44:06 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:06 IST" name="lunchApplication" finished-at="2025-06-02T21:44:10 IST" duration-ms="3743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lunchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:10 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-02T21:44:24 IST" duration-ms="14163" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -92,15 +256,15 @@ at java.base/java.lang.Thread.run(Thread.java:1575)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:09 IST" name="closeBrowser" finished-at="2025-06-01T13:34:09 IST" duration-ms="87" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:24 IST" name="closeBrowser" finished-at="2025-06-02T21:44:24 IST" duration-ms="95" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:09 IST" name="lunchApplication" finished-at="2025-06-01T13:34:17 IST" duration-ms="7148" status="PASS">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:24 IST" name="lunchApplication" finished-at="2025-06-02T21:44:27 IST" duration-ms="3320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:17 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-01T13:34:32 IST" duration-ms="15170" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:27 IST" name="submitOrder" data-provider="getData" finished-at="2025-06-02T21:44:41 IST" duration-ms="14312" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -111,19 +275,19 @@ at java.base/java.lang.Thread.run(Thread.java:1575)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:32 IST" name="closeBrowser" finished-at="2025-06-01T13:34:32 IST" duration-ms="104" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:41 IST" name="closeBrowser" finished-at="2025-06-02T21:44:41 IST" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:32 IST" name="lunchApplication" finished-at="2025-06-01T13:34:36 IST" duration-ms="3860" status="PASS">
+        <test-method is-config="true" signature="lunchApplication()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:41 IST" name="lunchApplication" finished-at="2025-06-02T21:44:46 IST" duration-ms="4024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lunchApplication -->
-        <test-method signature="orderHistory()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:36 IST" name="orderHistory" finished-at="2025-06-01T13:34:37 IST" depends-on-methods="Automation.Tests.SubmitOrderTest.submitOrder" duration-ms="764" status="PASS">
+        <test-method signature="orderHistory()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:46 IST" name="orderHistory" finished-at="2025-06-02T21:44:46 IST" depends-on-methods="Automation.Tests.SubmitOrderTest.submitOrder" duration-ms="655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orderHistory -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@e25951c]" started-at="2025-06-01T13:34:37 IST" name="closeBrowser" finished-at="2025-06-01T13:34:37 IST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Automation.Tests.SubmitOrderTest@6f8e8894]" started-at="2025-06-02T21:44:46 IST" name="closeBrowser" finished-at="2025-06-02T21:44:46 IST" duration-ms="88" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

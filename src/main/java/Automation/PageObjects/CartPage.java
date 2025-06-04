@@ -21,10 +21,10 @@ public class CartPage extends AbstructComponent {
 	}
 	
 	@FindBy(css=".cartSection h3")
-	List<WebElement> cartProducts;
+	private List<WebElement> cartProducts;
 	
 	@FindBy(css=".totalRow button")
-	WebElement checkout;
+	private WebElement checkout;
 	
 	public Boolean verifyProduct(String productName) {
 		Boolean match = cartProducts.stream().anyMatch(cartProduct-> cartProduct.getText().equalsIgnoreCase(productName));

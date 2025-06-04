@@ -20,13 +20,13 @@ public class CheckoutPage extends AbstructComponent{
 	}
 	
 	@FindBy(xpath="//input[@placeholder='Select Country']")
-	WebElement country;
+	private WebElement country;
 	
 	@FindBy(css=".ta-item:nth-of-type(2)")
-	WebElement selectCountry;
+	private WebElement selectCountry;
 	
 	@FindBy(css=".action__submit ")
-	WebElement submit;
+	private WebElement submit;
 	
 	By results = By.cssSelector(".ta-results");
 	

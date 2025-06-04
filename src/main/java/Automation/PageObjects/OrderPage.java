@@ -21,7 +21,7 @@ public class OrderPage extends AbstructComponent {
 	}
 	
 	@FindBy(css="tr td:nth-child(3)")
-	List<WebElement> productNames;
+	private List<WebElement> productNames;
 	
 	public Boolean verifyOrder(String productName) {
 		Boolean match = productNames.stream().anyMatch(cartProduct-> cartProduct.getText().equalsIgnoreCase(productName));

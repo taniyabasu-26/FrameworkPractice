@@ -18,16 +18,16 @@ public class LandingPage extends AbstructComponent {
 	}
 	
 	@FindBy(id="userEmail")
-	WebElement userEmail;
+	private WebElement userEmail;
 	
 	@FindBy(id="userPassword")
-	WebElement userPassord;
+	private WebElement userPassord;
 	
 	@FindBy(id="login")
-	WebElement submit;
+	private WebElement submit;
 	
 	@FindBy(css="[class*='flyInOut']")
-	WebElement errorMsg;
+	private WebElement errorMsg;
 	
 	public ProductCatelog login(String email, String password) {
 		userEmail.sendKeys(email);
